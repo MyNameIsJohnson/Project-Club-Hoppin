@@ -20,15 +20,15 @@ header,h1{
   height: 300px;
   margin: 10px;
   padding: 10px;
-};
+}
 .club{
-  display: inline;
+  align-items: center;
 }
 .clubInfo{
   background-color: #554f63;
   padding: 10px;
-  margin-top: 5px;;
   color: white;
+  height: 280px;
 }
 footer{
   background-color: darkgray;
