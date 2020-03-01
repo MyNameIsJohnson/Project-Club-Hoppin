@@ -18,7 +18,7 @@ header,h1{
 .clubimg img{
   width: 300px;
   height: 300px;
-  margin: 10px;
+  margin-bottom: 20px;
   padding: 10px;
 }
 .club{
@@ -26,10 +26,23 @@ header,h1{
 }
 .clubInfo{
   background-color: #554f63;
-  padding: 10px;
+  padding: 20px;
   color: white;
   height: 280px;
 }
 footer{
   background-color: darkgray;
+}
+a h4{
+  color: #a3a3ec;
+  margin-bottom: 0px;
+  text-align: center;
+}
+a h4:hover{
+  color: aliceblue;
+  text-decoration: none;
+}
+.postBtn{
+  background-color: #a3a3ec;
+  color: white;
 }
