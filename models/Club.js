@@ -4,7 +4,9 @@ const Post = require('./Post');
 const ClubSchema = new mongoose.Schema({
     name: String,
     genre: String,
-    description: String,
+    details: String,
+    image: String,
+    link: String,
     reviews: [Post.schema]
 });
 
