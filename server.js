@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 });
 
 // ------------------- VIEW ROUTES
-// Use() is all methods (GET, PUT, POST, DELTE, etc);
+// Use() is all methods (GET, PUT, POST, DELETE, etc);
 app.use('/', routes.views);
 
 // ------------------- API ROUTES
