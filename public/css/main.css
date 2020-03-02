@@ -1,0 +1,51 @@
+body{
+  background-color: #5d5871;
+}
+header,h1{
+  font-family: fantasy;
+  padding: 20px;
+  position: relative;
+  color: white;
+}
+.logo{
+  height: 100px;
+  font-family: cursive;
+  color: #a3a3ec;
+  background-color: #393131;
+  text-align: center;
+  font-size: 50px;
+}
+.row h4 {
+  color: #cab9ed;
+}
+.clubimg img{
+  width: 300px;
+  height: 300px;
+}
+.club{
+  margin-top: 30px;
+}
+.clubInfo{
+  background-color: #554f63;
+  padding: 20px;
+  background-color: #554f63;
+  color: white;
+  height: 300px;
+}
+.postBtn {
+  background-color: #cab9ed;
+  color: #3e43d0;
+}
+.postBtn:hover {
+  color: #b2b4e9;
+  background-color: #502d97;
+}
+footer{
+  background-color: darkgray;
+  margin-top: 20px;
+}
+/* work on screen sizing
+@media (max-width: @screen-xs-max) { 786px }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { ... }
