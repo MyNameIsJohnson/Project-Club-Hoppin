@@ -14,7 +14,6 @@ function render(clubsArr) {
   const clubsTemplates = clubsArr.map((clubs) => {
     return getClubTemplate(clubs);
   }).join('');
-
   clubElement.insertAdjacentHTML('beforeend', clubsTemplates);
 }
 
