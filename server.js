@@ -1,10 +1,3 @@
-// SERVER SIDE JAVSCRIPT (Node.js with Express.js)
-
-// Core Node Modules
-// 3rd Party NPM Modules
-// Custom Modules
-// Variables
-
 const express = require('express'); // The write less, do more library for Node
 const bodyParser = require('body-parser'); // Parses data out of the request object and puts it in the "body" property
 const app = express();
