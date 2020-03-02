@@ -8,11 +8,11 @@ router.get('/', (req, res) => {
    
 })
 // ----------- Clubs Routes
-router.get('/clubs', ctrl.cities.index);
-router.get('/clubs/:id', ctrl.cities.show);
-router.post('/clubs', ctrl.cities.create);
-router.put('/clubs/:id', ctrl.cities.update);
-router.delete('/clubs/:id', ctrl.cities.destroy);
+router.get('/clubs', ctrl.clubs.index);
+router.get('/clubs/:id', ctrl.clubs.show);
+router.post('/clubs', ctrl.clubs.create);
+router.put('/clubs/:id', ctrl.clubs.update);
+router.delete('/clubs/:id', ctrl.clubs.destroy);
 
 // ------------- Post Routes
 router.get('/posts', ctrl.posts.index);
