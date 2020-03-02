@@ -16,10 +16,6 @@ const clubs = [
         genre: "Hip-Hop",
         description: "Dramatic red lighting & burlesque art set the mood at this swanky lounge & late-night dance club.",
     },
-    {
-        name: "Hawthorn-Latin",
-        genre:
-        description:
-    },
-],
+
+]
 
