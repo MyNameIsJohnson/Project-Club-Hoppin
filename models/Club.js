@@ -4,11 +4,8 @@ const Post = require('./Post');
 const ClubSchema = new mongoose.Schema({
     name: String,
     genre: String,
-    reviews: [{}],
-    PostRef: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Post',
-    }
+    description: String,
+    reviews: [Post.schema]
 });
 
 module.exports = mongoose.model('Club', ClubSchema);

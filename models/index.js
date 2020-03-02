@@ -6,7 +6,7 @@ mongoose.connect(DB_URI, {
     useCreateIndex: true,
     useUnifiedTopology: true,
   })
-    .then(() => console.log('MongoDB is firing on all cylinders'))
+    .then(() => console.log('MongoDB is connected'))
     .catch((err) => console.log(err));
   
     module.exports = {
