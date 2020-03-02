@@ -16,6 +16,9 @@ app.use(express.static(__dirname + '/public'));
 
 // Init BodyParser
 app.use(bodyParser.json());
+// ----------------- Initialize (telling the server to start listening)
+app.listen(PORT, ()=> console.log(`Hello your port is ${PORT}`))
+
 
 // Custom Request Logger Middleware
 app.use((req, res, next) => {
@@ -35,7 +38,7 @@ app.use((req, res, next) => {
 });
 
 // ------------------- VIEW ROUTES
-// Use() is all methods (GET, PUT, POST, DELTE, etc);
+// Use() is all methods (GET, PUT, POST, DELETE, etc);
 app.use('/', routes.views);
 
 // ------------------- API ROUTES

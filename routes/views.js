@@ -1,13 +1,13 @@
 const express = require('express');
-// DONT FORGET TO INVOKE ROUTER()
+// ----------------- Invoking Router
 const router = express.Router();
 
-// DONT FORGET TO CHANGE APP TO ROUTER
+// ------------------ Changing App To Router
 router.get('/', (req, res) => {
-  // Two Args: 1- Path to template, 2- root directory
-  res.sendFile('views/index.html', {
-    root: __dirname + '/../'
-  });
+    res.sendFile('views/index.html', {
+        root: __dirname + '/../' // Path to root directory & Template
+    });
 });
 
+// Exporting Router
 module.exports = router;
