@@ -32,7 +32,7 @@ function getClubTemplate(clubs) {
   </div>
   <div class="clubInfo col-md-8">
     <p class="details">
-      ${clubs.details}</p> 
+      ${clubs.details}</p>
     </p>
     <button type="submit" class="postBtn">Post review</button>          
   </div>        
