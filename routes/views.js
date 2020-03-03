@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
         root: __dirname + '/../' // Path to root directory & Template
     });
 });
-
+router.get('/clubs/new', (req, res) => {
+    res.sendFile('views/clubs/index.html', {
+        root: __dirname + '/../'
+    });
+});
 // Exporting Router
 module.exports = router;
