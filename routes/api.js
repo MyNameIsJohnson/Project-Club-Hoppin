@@ -2,12 +2,10 @@ const express = require('express');
 const router = express.Router();
 const ctrl = require('../controllers');
 
-
-//  })
 // ----------- Clubs Routes
 router.get('/clubs', ctrl.clubs.index);
 router.get('/clubs/:id', ctrl.clubs.show);
-// router.post('/clubs', ctrl.clubs.create);
+//  router.post('/clubs', ctrl.clubs.create);
 // router.put('/clubs/:id', ctrl.clubs.update);
 // router.delete('/clubs/:id', ctrl.clubs.destroy);
 
