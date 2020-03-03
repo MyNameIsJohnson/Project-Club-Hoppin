@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
         root: __dirname + '/../' // Path to root directory & Template
     });
 });
-router.get('/clubs/new', (req, res) => {
-    res.sendFile('views/clubs/index.html', {
+router.get('/reviews', (req, res) => {
+    res.sendFile('views/review.html', {
         root: __dirname + '/../'
     });
 });

@@ -1,4 +1,4 @@
 module.exports = {
-    // post: require('./postsController'),
-    clubs: require('./clubsController')
+    clubs: require('./clubsController'),
+    posts: require('./postsController')
 }
