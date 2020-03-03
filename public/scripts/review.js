@@ -1,4 +1,4 @@
-const API_BASE = '/pai/v1';
+const API_BASE = '/api/v1';
 const clubs = document.getElementById('clubs');
 const clubId = window.location.pathname.split('/')[2];
 const postForm = document.getElementById('newPost');
