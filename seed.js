@@ -57,7 +57,13 @@ const clubs = [
         link:"https://www.grandnightclub.com/",
         details:"Upscale, Vegas-style club with state-of-the-art lighting & sound, plus VIP seating on the top floor. The Grand offers four bars fully stocked with the best stuff on earth so you and your friends can enjoy smooth signature cocktails made with premium liquor. If you and your friends are celebrating a special occasion or just looking for the ultimate VIP treatment, reserve a VIP Table with a bird's eye view of all the action and more.",
     },
-    
+    {
+        name:"City Nights",
+        genre:"Hip-Hop",
+        image:"/images/city-nights.png",
+        link:"https://www.sfclubs.com/",
+        details:"Upscale, Vegas-style club with state-of-the-art lighting & sound, plus VIP seating on the top floor. The Grand offers four bars fully stocked with the best stuff on earth so you and your friends can enjoy smooth signature cocktails made with premium liquor. If you and your friends are celebrating a special occasion or just looking for the ultimate VIP treatment, reserve a VIP Table with a bird's eye view of all the action and more.",
+    },
 ];
 
 

@@ -6,6 +6,7 @@ header,h1{
   padding: 20px;
   position: relative;
   color: white;
+  border-bottom: solid 2px #cfcbf7;
 }
 .logo{
   height: 100px;
@@ -21,6 +22,13 @@ header,h1{
 .clubimg img{
   width: 300px;
   height: 300px;
+  border-radius: 40px;
+  
+}
+.clubimg img:hover{
+  width: 310px;
+  height: 310px;
+  border-radius: 25px;
 }
 .club{
   margin-top: 30px;
@@ -32,6 +40,15 @@ header,h1{
   color: white;
   height: 300px;
 }
+a{
+  color: #9189e1;
+  text-decoration: none;
+}
+a:hover{
+  color: #cab9ed;
+  text-decoration: none;
+}
+
 .postBtn {
   background-color: #cab9ed;
   color: #3e43d0;
@@ -44,8 +61,12 @@ footer{
   background-color: darkgray;
   margin-top: 20px;
 }
-/* work on screen sizing
-@media (max-width: @screen-xs-max) { 786px }
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
-@media (min-width: @screen-lg-min) { ... }
+@media (max-width: 768px){
+  
+} 
+@media (max-width: 992px) {
+  
+}
+@media (max-width: 1200px) {
+  
+}
