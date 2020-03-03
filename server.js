@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/public'));
 // Init BodyParser
 app.use(bodyParser.json());
 // ----------------- Initialize (telling the server to start listening)
-app.listen(PORT, ()=> console.log(`Hello your port is ${PORT}`))
+// app.listen(PORT, ()=> console.log(`Hello your port is ${PORT}`))
 
 
 // Custom Request Logger Middleware
