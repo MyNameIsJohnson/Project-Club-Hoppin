@@ -91,7 +91,7 @@ db.Club.deleteMany({}, (err, result) => {
 
         // Create New Clubs
         console.log('Creating new cities...');
-        db.City.create(clubs, (err, newClubs) => {
+        db.Club.create(clubs, (err, newClubs) => {
         if (err) {
             console.log(err);
             process.exit();
