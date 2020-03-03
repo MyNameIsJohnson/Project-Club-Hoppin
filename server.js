@@ -1,7 +1,7 @@
 const express = require('express'); // The write less, do more library for Node
 const bodyParser = require('body-parser'); // Parses data out of the request object and puts it in the "body" property
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT =  process.env.PORT || 4000;
 
 // Init DB
 const db = require('./models'); // DB Models & Modules
@@ -16,8 +16,6 @@ app.use(express.static(__dirname + '/public'));
 
 // Init BodyParser
 app.use(bodyParser.json());
-// ----------------- Initialize (telling the server to start listening)
-app.listen(PORT, ()=> console.log(`Hello your port is ${PORT}`))
 
 
 // Custom Request Logger Middleware
