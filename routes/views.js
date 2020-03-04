@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         root: __dirname + '/../' // Path to root directory & Template
     });
 });
-router.get('/reviews', (req, res) => {
+router.get('/review', (req, res) => {
     res.sendFile('views/review.html', {
         root: __dirname + '/../'
     });
