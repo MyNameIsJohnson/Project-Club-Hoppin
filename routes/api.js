@@ -11,7 +11,7 @@ router.get('/clubs/:id', ctrl.clubs.show);
 
 // ------------- Post Routes
 router.get('/posts', ctrl.posts.index);
-// router.post('/clubs/:clubId/posts', ctrl.posts.create);
+//router.post('/clubs/:clubId/posts', ctrl.posts.create);
 // router.delete('/clubs/:clubId/posts/:postId', ctrl.posts.destroy);
 
 module.exports = router;
