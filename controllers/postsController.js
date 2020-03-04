@@ -6,13 +6,24 @@
          res.json(allPosts);
      });
  };
-//  const show = (req, res) => {
-//     db.Club.findById(req.params.id, (err, foundPosts) => {
-//         if (err) return res.status(400).json({status: 400, message: 'Something went wrong, please try again'}),
-//         res.json(foundPosts);
+
+ const create = (req, res) => {
+    db.Post.create(req.body, (err, foundPosts) => {
+        if (err) return res.status(400).json({status: 400, message: 'Something went wrong, please try again'}),
+        res.json(foundPosts);
         
-//     });
-//  };
- module.exports = {
-     index
+    db.Club.findById(req.params.clubsID, (err, foundClub) => {
+        if (err) return res.status(400).json({ status: 400, message: 'Something went wrong, please try again'}),
+        res.json(foundClub);
+
+    foundClub.posts.push(foundPosts);
+
+
+    });
+    
+    })
  };
+ module.exports = {
+     index,
+     create,
+ }
