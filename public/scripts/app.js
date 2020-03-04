@@ -23,9 +23,9 @@ function getClubTemplate(clubs) {
         ${clubs.name} <span>${clubs.genre}</span>
       </h4>
     </div>
-    <div class="clubing col-md-4">
+    <div class=" col-md-4">
       <a target="_blank" href="${clubs.link}">
-        <img class="img-responsive" src="${clubs.image}" alt="${clubs.name}"/></a>
+        <img class="img-responsive clubimg" src="${clubs.image}" alt="${clubs.name}"/></a>
     </div>
     <div class="clubInfo col-md-8">
       <p class="details">
