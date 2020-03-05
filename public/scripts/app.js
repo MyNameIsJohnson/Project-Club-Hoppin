@@ -30,7 +30,8 @@ function getClubTemplate(clubs) {
     <div class="clubInfo col-md-8">
       <p class="details">
         ${clubs.details}</p>
-      <a href="/clubs/${clubs._id}" class="postBtn btn btn-primary float-right">View Details</a>
+      <a href="/clubs/${clubs._id}" class="btn btn-primary float-right postBtn">Post</a>
+                
     </div>        
   </div>
   `;
