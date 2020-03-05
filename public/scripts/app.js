@@ -30,7 +30,7 @@ function getClubTemplate(clubs) {
     <div class="clubInfo col-md-8">
       <p class="details">
         ${clubs.details}</p>
-      <p>(${city.posts.length} ${city.posts.length === 1 ? 'post' : 'posts'})</p>
+      <p>(${club.posts.length} ${club.posts.length === 1 ? 'post' : 'posts'})</p>
       
       <button type="submit" class="postBtn">Post review</button>
       <a href="/clubs/${clubs._id}" class="btn btn-primary float-right">View Details</a>
