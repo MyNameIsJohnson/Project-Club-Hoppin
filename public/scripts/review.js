@@ -7,20 +7,17 @@ function getClub() {
   fetch(`${API_BASE}/clubs/${clubId}`)
   .then((stream) => stream.json())
   .then(res => render(res))
-  .catch((err) => console.log(err));
 }
 getClub();
 
 function render(clubObj) {
-  console.log(clubObj);
+  console.log(clubObj)
   const clubTemplate = getClubTemplate(clubObj);
   clubs.innerHTML = '';
-  clubObj.insertAdjacentHTML('beforeend', clubTemplate);
+  clubs.insertAdjacentHTML('beforeend', clubTemplate);
 }
-
 function getClubTemplate(clubs) {
-  // clubs Posts Template
-  const clubsPosts = clubs.posts.map((post) => {
+  const clubsPosts = clubs.reviews.map((post) => {
     return `
       <article id="${post._id}" class="card mb-4">
         <div class="card-body">
@@ -33,7 +30,6 @@ function getClubTemplate(clubs) {
     `;
   });
 
-  // clubs Template
   return `
     <div id="${clubs._id}" class="col-md-8 offset-md-2">
       <a type="button" class="btn btn-primary float-right mb-3 href="/views/index.html">Home</a>
@@ -50,8 +46,11 @@ function getClubTemplate(clubs) {
     </div>
   `;
 }
-postForm.addEventListener('submit', (event) => {
+console.log('is working');
+function addPost(){
+  postForm.addEventListener('submit', (event) => {
   event.preventDefault();
+  console.log('submitted');
   const title = document.getElementById('title');
   const body = document.getElementById('body');
   let formIsValid = false; 
@@ -89,7 +88,7 @@ postForm.addEventListener('submit', (event) => {
     const newPost = {title: title.value, body: body.value};
     console.log(newPost);
 
-    fetch(`/api/v1/clubs/${clubsId}/posts`, {
+    fetch(`/api/v1/clubs/${clubId}/posts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -105,9 +104,10 @@ postForm.addEventListener('submit', (event) => {
         }
       })
       .catch((err) => console.log(err));
-  }
+    }
 });
-
+}
+addPost()
 
 // Delete clubs Post
 clubs.addEventListener('click', (event) => {
