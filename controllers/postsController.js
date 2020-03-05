@@ -26,35 +26,36 @@
 });
 };
 
-// const destroy = (req, res) => {
-//     db.Club.findById(req.params.cityId, (err, foundClubs) => {
-//     if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+const destroy = (req, res) => {
+    db.Club.findById(req.params.clubId, (err, foundClubs) => {
+    if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
 
-//     const deletePost = foundCity.posts.id(req.params.postId);
+    const deletePost = foundClubs.reviews.id(req.params.postId);
 
-//     if (!deletePost) {
-//         return res.status(400).json({status: 400, error: 'Could not find post'});
+    if (!deletePost) {
+        return res.status(400).json({status: 400, error: 'Could not find post'});
+
     
-// }
+}
+deletePost.remove();
 
-// deletePost.remove();
+foundClubs.save((err, savedClubs) => {
+    if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+    db.Post.findByIdAndDelete(req.params.postId, (err, deletedPost) => {
+        if (err)
+            return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
 
-// foundClubs.save((err, savedClubs) => {
-//     if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
-//     db.Post.findByIdAndDelete(req.params.postId, (err, deletedPost) => {
-//         if (err)
-//             return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
-
-//           res.json(deletedPost);
-//       });
-//     });
-//   });
-// }
+          res.json(deletedPost);
+      });
+    });
+  });
+};
 
 
  module.exports = {
      index,
      create,
-     
- }
+     destroy
+    
+ };
 
