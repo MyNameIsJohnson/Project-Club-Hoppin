@@ -7,6 +7,7 @@
      });
  };
 
+// ---------------- Creating A Review (Post)
  const create = (req, res) => {
    console.log(req.body)
     db.Post.create(req.body, (err, post) => {
@@ -26,6 +27,31 @@
 });
 };
 
+const update = (req, res) => {
+    
+    db.Post.findByIdAndUpdate(req.params.postId, req.body, {new: true}, (err, updatedClub) => {
+      if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+  
+      db.Club.findById(req.params.clubId, (err, foundClub) => {
+        if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+    
+        const updatePost = foundClub.reviews.id(req.params.postId);
+        updatePost.set(req.body)
+        foundClub.save((err, savedClub) => {
+         if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+         
+         res.json(savedClub);
+    //     if (!updatePost) {
+    //         return res.status(400).json({status: 400, error: 'Could not update post'});
+         
+    // });
+    });
+    });
+    });
+    
+  };
+
+// ---------------- Deleting A Review (Post)
 const destroy = (req, res) => {
     db.Club.findById(req.params.clubId, (err, foundClubs) => {
     if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
@@ -55,6 +81,7 @@ foundClubs.save((err, savedClubs) => {
  module.exports = {
      index,
      create,
+     update,
      destroy
     
  };
