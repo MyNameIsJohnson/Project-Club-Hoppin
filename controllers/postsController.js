@@ -1,10 +1,19 @@
  const db = require('../models');
-
+// -------------- Show Reviews (Posts)
  const index = (req, res) => {
      db.Post.find({}, (err, allPosts) => {
          if (err) return res.status(400).json({status: 400, message: 'Something went wrong please try again'});
          res.json(allPosts);
      });
+ };
+// -------------- Show A Review (Post)
+ const show = (req, res) => {
+     console.log('beep')
+    db.Post.findById(req.params.postId, (err, foundPost) => {
+        if (err) return res.status(400).json({status: 400, message: 'Something went wrong, please try again'});
+        res.json(foundPost);
+        
+    });
  };
 
 // ---------------- Creating A Review (Post)
@@ -26,7 +35,7 @@
 });
 });
 };
-
+// ------------ Get And Edit A Review (Post)
 const update = (req, res) => {
     
     db.Post.findByIdAndUpdate(req.params.postId, req.body, {new: true}, (err, updatedClub) => {
@@ -41,10 +50,6 @@ const update = (req, res) => {
          if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
          
          res.json(savedClub);
-    //     if (!updatePost) {
-    //         return res.status(400).json({status: 400, error: 'Could not update post'});
-         
-    // });
     });
     });
     });
@@ -80,6 +85,7 @@ foundClubs.save((err, savedClubs) => {
 
  module.exports = {
      index,
+     show,
      create,
      update,
      destroy
