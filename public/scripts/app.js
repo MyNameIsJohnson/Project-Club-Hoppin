@@ -31,7 +31,6 @@ function getClubTemplate(clubs) {
       <p class="details">
         ${clubs.details}</p>
       <a href="/clubs/${clubs._id}" class="postBtn btn btn-primary float-right">View Details</a>
-                
     </div>        
   </div>
   `;
