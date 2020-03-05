@@ -118,7 +118,7 @@ clubs.addEventListener('click', (event) => {
 
 
 function deletePost(event) {
-  fetch(`/api/v1/clubs/${clubsId}/posts/${event.target.parentNode.parentNode.id}`, {
+  fetch(`/api/v1/clubs/${clubId}/posts/${event.target.parentNode.parentNode.id}`, {
     method: 'DELETE',
   })
     .then((stream) => stream.json())
