@@ -24,8 +24,9 @@ function getClubTemplate(clubs) {
     return `
       <article id="${post._id}" class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">${post.title}</h5>
-          <p class="card-text">${post.body}</p>
+          <h5 class="card-title">${post.name}</h5>
+          <p class="card-title">${post.review}</p>
+          <p class="card-text">${post.description}</p>
           <button class="btn btn-sm btn-danger float-right delete-post" type="button">Delete Post</button>
         </div>
       </article>
@@ -35,12 +36,13 @@ function getClubTemplate(clubs) {
   // clubs Template
   return `
     <div id="${clubs._id}" class="col-md-8 offset-md-2">
+      <a type="button" class="btn btn-primary float-right mb-3 href="/views/index.html">Home</a>
       <button type="button" class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#newPostModal">
         Add Post
       </button>
-      <img src="${clubs.image}" class="img-fluid" width="100%" />
       <h2>${clubs.name}</h2>
-      <p class="mb-5">${clubs.description}</p>
+      <img src="${clubs.image}" class="img-fluid" width="100%" />
+      <p class="mb-5">${clubs.details}</p>
       <section>
       <h4 class="mb-4">Posts:</h4>
         ${clubsPosts}
