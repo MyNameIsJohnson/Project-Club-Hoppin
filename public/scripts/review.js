@@ -32,8 +32,8 @@ function getClubTemplate(clubs) {
 
   return `
     <div id="${clubs._id}" class="col-md-8 offset-md-2">
-      <a type="button" class="btn btn-primary float-right mb-3 href="/views/index.html">Home</a>
-      <button type="button" class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#newPostModal">
+      <a type="button" class="postBtn btn btn-primary float-left mb-3" href="../">Home</a>
+      <button type="button" class="postBtn btn btn-primary float-right mb-3" data-toggle="modal" data-target="#newPostModal">
         Add Post
       </button>
       <h2>${clubs.name}</h2>
@@ -118,7 +118,7 @@ clubs.addEventListener('click', (event) => {
 
 
 function deletePost(event) {
-  fetch(`/api/v1/clubs/${clubsId}/posts/${event.target.parentNode.parentNode.id}`, {
+  fetch(`/api/v1/clubs/${clubId}/posts/${event.target.parentNode.parentNode.id}`, {
     method: 'DELETE',
   })
     .then((stream) => stream.json())

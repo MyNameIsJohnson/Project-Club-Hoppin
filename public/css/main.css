@@ -46,7 +46,10 @@ a:hover{
   color: #cab9ed;
   text-decoration: none;
 }
-
+h2{
+  color: #b2b4e9;
+  text-align: center;
+}
 .postBtn {
   background-color: #cab9ed;
   color: #3e43d0;
