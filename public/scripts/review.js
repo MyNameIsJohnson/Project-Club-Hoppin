@@ -11,7 +11,6 @@ function getClub() {
 getClub();
 
 function render(clubObj) {
-  console.log(clubObj)
   const clubTemplate = getClubTemplate(clubObj);
   clubs.innerHTML = '';
   clubs.insertAdjacentHTML('beforeend', clubTemplate);
@@ -21,7 +20,7 @@ function getClubTemplate(clubs) {
     return `
       <article id="${post._id}" class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">${post.name}</h5>
+          <h5 class="card">${post.name}</h5>
           <p class="card-title">${post.review}</p>
           <p class="card-text">${post.description}</p>
           <button class="btn btn-sm btn-danger float-right delete-post" type="button">Delete Post</button>
@@ -40,13 +39,12 @@ function getClubTemplate(clubs) {
       <img src="${clubs.image}" class="img-fluid" width="100%" />
       <p class="mb-5">${clubs.details}</p>
       <section>
-      <h4 class="mb-4">Posts:</h4>
+      <h4 class="mb-4">Reviews:</h4>
         ${clubsPosts}
       </section>
     </div>
   `;
 }
-console.log('is working');
 function addPost(){
   postForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -110,6 +108,7 @@ function addPost(){
 addPost()
 
 // Delete clubs Post
+
 clubs.addEventListener('click', (event) => {
   if (event.target.classList.contains('delete-post')) {
     deletePost(event);
@@ -127,4 +126,5 @@ function deletePost(event) {
 
     })
     .catch((err) => console.log(err));
+  
 }
