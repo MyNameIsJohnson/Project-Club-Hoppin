@@ -48,7 +48,39 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              <button type="submit" class="btn btn-primary">Add Post</button>
+              <button type="submit" class="postBtn btn btn-primary" data-toggle="modal" data-target="#newPostModal">Add Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="modal fade" id="newEditModal" tabindex="-1" role="dialog" aria-labelledby="newEditModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <form id="newEdit">
+            <div class="modal-header">
+              <h5 class="modal-edit" id="newEditModalLabel">Edit Post</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-10 offset-md-1">
+                <div class="form-group">
+                  <label for="edit">Reviewer Name</label>
+                  <input id="edit" type="text" name="edit" class="form-control form-control-lg" />
+                </div>
+                <div class="form-group">
+                  <label for="body">Review</label>
+                  <textarea id="edit-body" name="body" rows="10" class="form-control form-control-lg"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" id="edit-submit" class="editBtn btn btn-primary" data-toggle="modal" data-target="#newEditModal">Edit Post</button>
             </div>
           </form>
         </div>
