@@ -11,7 +11,6 @@ function getClub() {
 getClub();
 
 function render(clubObj) {
-  console.log(clubObj)
   const clubTemplate = getClubTemplate(clubObj);
   clubs.innerHTML = '';
   clubs.insertAdjacentHTML('beforeend', clubTemplate);
@@ -50,7 +49,6 @@ console.log('is working');
 function addPost(){
   postForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  console.log('submitted');
   const title = document.getElementById('title');
   const body = document.getElementById('body');
   let formIsValid = false; 
@@ -84,7 +82,6 @@ function addPost(){
   }
 
   if (formIsValid) {
-    console.log('Let\'s do this!');
     const newPost = {title: title.value, body: body.value};
     console.log(newPost);
 
@@ -116,7 +113,6 @@ clubs.addEventListener('click', (event) => {
   }
 });
 
-
 function deletePost(event) {
   fetch(`/api/v1/clubs/${clubId}/posts/${event.target.parentNode.parentNode.id}`, {
     method: 'DELETE',
@@ -124,7 +120,6 @@ function deletePost(event) {
     .then((stream) => stream.json())
     .then((res) => {
       console.log(res);
-
     })
     .catch((err) => console.log(err));
 }
