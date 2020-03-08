@@ -63,7 +63,12 @@ footer{
   background-color: darkgray;
   margin-top: 20px;
 }
-
+.reviewPage{
+  color:#cab9ed;
+}
+.card-body{
+  background-color: #69569e;
+}
 @media (min-width: 360px) {
   .clubimg {
     width: 100%;

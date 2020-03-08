@@ -23,17 +23,17 @@ function getClubTemplate(clubs) {
         <div class="card-body">
           <h5 class="card">${post.name}</h5>
           <p class="card-title">${post.review}</p>
-          <button class="btn btn-sm btn-danger float-right edit-post" type="button" data-toggle="modal" data-target="#newEditModal">Edit Post</button>
+          <button class="postBtn btn btn-sm btn-danger float-right edit-post" type="button" data-toggle="modal" data-target="#newEditModal">Edit Post</button>
           
-          <button class="btn btn-sm btn-danger float-right delete-post" type="button">Delete Post</button>
+          <button onclick="location.reload()" class="postBtn btn btn-sm btn-danger float-right delete-post" type="button">Delete Post</button>
         </div>
       </article>
     `;
   });
 
   return `
-    <div id="${clubs._id}" class="col-md-8 offset-md-2">
-      <a type="button" class="postBtn btn btn-primary float-left mb-3" href="../">Home</a>
+    <div id="${clubs._id}" class="reviewPage col-md-8 offset-md-2">
+      <a type="button" class="postBtn btn btn-primary float-left mb-3" href="../" >Home</a>
       <button type="button" class="postBtn btn btn-primary float-right mb-3" data-toggle="modal" data-target="#newPostModal">
         Add Post
       </button>
