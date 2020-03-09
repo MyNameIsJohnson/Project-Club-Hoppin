@@ -49,4 +49,4 @@ app.use('*', (req, res) => {
 // ------------------ START SERVER
 
 
-app.listen(process.env.PORT || PORT);
+app.listen(PORT)
