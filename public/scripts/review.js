@@ -124,8 +124,6 @@ function deletePost(event) {
     .then((stream) => stream.json())
     .then((res) => {
       console.log(res);
-<<<<<<< HEAD
-=======
     })
     .catch((err) => console.log(err)); 
 }
@@ -193,7 +191,6 @@ function submitEditPost(event) {
         getClub();
         $('#editPostModal').modal('hide');
       }
->>>>>>> johnson
     })
     .catch((err) => console.log(err));
   }
