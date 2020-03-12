@@ -3,22 +3,22 @@ const bodyParser = require('body-parser'); // Parses data out of the request obj
 const app = express();
 const PORT =  process.env.PORT || 4000;
 
-// Init DB
+// ------------------ Init DB
 const db = require('./models'); // DB Models & Modules
 
-// Init Routes
+// ------------------ Init Routes
 const routes = require('./routes'); // Routes Module
 
 // ------------------- MIDDLEWARE
 
-// Serve Public Assets
+// ------------------- Serve Public Assets
 app.use(express.static(__dirname + '/public'));
 
-// Init BodyParser
+// ------------------- Init BodyParser
 app.use(bodyParser.json());
 
 
-// Custom Request Logger Middleware
+// -------------------- Custom Request Logger Middleware
 app.use((req, res, next) => {
   const url = req.url;
   const method = req.method;
@@ -41,11 +41,12 @@ app.use('/api/*', (req, res) => {
   res.status(404).json({status: 404, error: 'Error 404: Resource not found'});
 });
 
-// HTML Error 404
+// ------------------ HTML Error 404
 app.use('*', (req, res) => {
   res.send('<h2>Error 404: Not Found</h2>');
 });
 
 // ------------------ START SERVER
 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+
+app.listen(PORT)
