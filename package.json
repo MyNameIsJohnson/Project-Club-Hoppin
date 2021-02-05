@@ -4,7 +4,8 @@
   "description": "Project 1 - Fullstack",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Johnson Thieu",
   "license": "ISC",
@@ -13,9 +14,20 @@
     "bower": "^1.8.8",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "lts": "^1.2.0",
     "method-override": "^3.0.0",
-    "mongoose": "^5.9.3",
-    "nodemon": "^2.0.2"
+    "mongod": "^2.0.0",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyNameIsJohnson/Project-Club-Hoppin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MyNameIsJohnson/Project-Club-Hoppin/issues"
+  },
+  "homepage": "https://github.com/MyNameIsJohnson/Project-Club-Hoppin#readme"
 }
