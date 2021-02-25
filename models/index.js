@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const DB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Project-1-Club-Hoppin'
+const DB_URI = process.env.MONGODB_URI || 'mongodb+srv://johnsonthieu:Mymongodb929!@sei.galny.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 mongoose.connect(DB_URI, {
     useNewUrlParser: true,
     useFindAndModify: false,
