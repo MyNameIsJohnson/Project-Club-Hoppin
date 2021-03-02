@@ -1,16 +1,13 @@
 const mongoose = require('mongoose');
-const DB_URI = process.env.MONGODB_URI || 'mongodb+srv://johnsonthieu:Mymongodb929!@sei.galny.mongodb.net/Project-1-Club-Hoppin?retryWrites=true&w=majority'
-
-const configOptions = {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-};
-
-  mongoose.connect(DB_URI, configOptions)
-    .then(() => console.log('MongoDB successfully connected...'))
-    .catch(err => console.log(`MongoDB connection error: ${err}`));
+const DB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Project-1-Club-Hoppin'
+mongoose.connect(DB_URI, {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  })
+    .then(() => console.log('MongoDB is connected'))
+    .catch((err) => console.log(err));
   
     module.exports = {
       Post: require('./Post.js'), 
