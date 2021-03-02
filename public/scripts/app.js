@@ -1,6 +1,6 @@
 const clubElement = document.getElementById('clubs');
 
-fetch('/api/v1/clubs')
+fetch('https://club-hoppin.herokuapp.com/api/v1/clubs')
   .then((buffer) => buffer.json())
   .then((data) => {
     console.log(data);

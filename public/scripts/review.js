@@ -5,7 +5,7 @@ const postForm = document.getElementById('newPost');
 const editForm = document.getElementById('editPost');
 
 function getClub() {
-  fetch(`${API_BASE}/clubs/${clubId}`)
+  fetch(`https://club-hoppin.herokuapp.com/${API_BASE}/clubs/${clubId}`)
   .then((stream) => stream.json())
   .then(res => render(res))
 }
@@ -85,7 +85,7 @@ function addPost(){
   if (formIsValid) {
     const newPost = {name: title.value, review: body.value};
 
-    fetch(`/api/v1/clubs/${clubId}/posts`, {
+    fetch(`https://club-hoppin.herokuapp.com/api/v1/clubs/${clubId}/posts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ clubs.addEventListener('click', (event) => {
 });
 
 function deletePost(event) {
-  fetch(`/api/v1/clubs/${clubId}/posts/${event.target.parentNode.parentNode.id}`, {
+  fetch(`https://club-hoppin.herokuapp.com/api/v1/clubs/${clubId}/posts/${event.target.parentNode.parentNode.id}`, {
     method: 'DELETE',
   })
     .then((stream) => stream.json())
@@ -177,7 +177,7 @@ function submitEditPost(event) {
     console.log(newPost);
     console.log(editId);
   
-  fetch(`/api/v1/clubs/${clubId}/posts/${editId}`, {
+  fetch(`https://club-hoppin.herokuapp.com/api/v1/clubs/${clubId}/posts/${editId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
