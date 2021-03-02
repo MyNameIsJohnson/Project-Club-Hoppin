@@ -1,6 +1,7 @@
 const express = require('express'); // The write less, do more library for Node
 const bodyParser = require('body-parser'); // Parses data out of the request object and puts it in the "body" property
 const app = express();
+const cors = require('cors')
 const PORT =  process.env.PORT || 4000;
 
 // ------------------ Init DB
@@ -16,6 +17,9 @@ app.use(express.static(__dirname + '/public'));
 
 // ------------------- Init BodyParser
 app.use(bodyParser.json());
+
+//-------------------- Cross-Origin Resource Sharing
+app.use(cors())
 
 
 // -------------------- Custom Request Logger Middleware
@@ -49,4 +53,4 @@ app.use('*', (req, res) => {
 // ------------------ START SERVER
 
 
-app.listen(PORT)
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
