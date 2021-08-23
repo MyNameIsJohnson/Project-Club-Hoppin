@@ -34,7 +34,7 @@ const clubs = [
         genre: "Hip-Hop",
         image: "/images/Love&Prop-HipHop.png",
         link:"https://www.loveandpropaganda.com/",
-        details: "Trendy, multilevel club with visiting DJs & late night dancing in a dramatic, modern setting. Situated in San Francisco's Union Square district, Love and Propaganda is a crossroads where music, fashion, and art all meet to form an audio-visual experience unlike anything you've ever seen before. After you've settled into the gorgeous neo-classic inspired design, sound becomes the focal point. Expect to have your understanding of nightlife challenged.",
+        details: "Trendy, yes! Multilevel club with visiting DJs & late night dancing in a dramatic, modern setting. Situated in San Francisco's Union Square district, Love and Propaganda is a crossroads where music, fashion, and art all meet to form an audio-visual experience unlike anything you've ever seen before. After you've settled into the gorgeous neo-classic inspired design, sound becomes the focal point. Expect to have your understanding of nightlife challenged.",
     },
     {
         name: "Raven Bar",
