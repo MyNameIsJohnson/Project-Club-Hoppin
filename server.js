@@ -48,5 +48,5 @@ app.use('*', (req, res) => {
 
 // ------------------ START SERVER
 
-// app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+// app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));

@@ -6,7 +6,11 @@ const postForm = document.getElementById('newPost');
 function getClub() {
   fetch(`${API_BASE}/clubs/${clubId}`)
   .then((stream) => stream.json())
-  .then(res => render(res))
+  .then(res => {
+    console.log(res);
+    render(res)
+    })
+  
 }
 getClub();
 
@@ -17,18 +21,20 @@ function render(clubObj) {
   clubs.insertAdjacentHTML('beforeend', clubTemplate);
 }
 function getClubTemplate(clubs) {
-  const clubsPosts = clubs.reviews.map((post) => {
+  const clubsPosts = clubs.posts.map((post) => {
     return `
       <article id="${post._id}" class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">${post.name}</h5>
-          <p class="card-title">${post.review}</p>
-          <p class="card-text">${post.description}</p>
-          <button class="btn btn-sm btn-danger float-right delete-post" type="button">Delete Post</button>
+          <h5 class="card-title">${post.title}</h5>
+       
+          <p class="card-text">${post.body}</p>
+          <button hidden class="btn btn-sm btn-danger float-right delete-post" type="button" >Delete Post</button>
         </div>
       </article>
     `;
   });
+
+  console.log(clubsPosts)
 
   return `
     <div id="${clubs._id}" class="col-md-8 offset-md-2">
@@ -86,7 +92,7 @@ function addPost(){
   if (formIsValid) {
     console.log('Let\'s do this!');
     const newPost = {title: title.value, body: body.value};
-    console.log(newPost);
+    console.log(newPost+"--");
 
     fetch(`/api/v1/clubs/${clubId}/posts`, {
       method: 'POST',
@@ -101,6 +107,7 @@ function addPost(){
         if (res.title) {
           getClub();
           $('#newPostModal').modal('hide');
+          document.getElementById("newPost").reset();
         }
       })
       .catch((err) => console.log(err));
@@ -118,13 +125,15 @@ clubs.addEventListener('click', (event) => {
 
 
 function deletePost(event) {
-  fetch(`/api/v1/clubs/${clubId}/posts/${event.target.parentNode.parentNode.id}`, {
+  const deleteThisPost = event.target.parentNode.parentNode.id
+  fetch(`/api/v1/clubs/${clubId}/posts/${deleteThisPost}`, {
     method: 'DELETE',
   })
     .then((stream) => stream.json())
     .then((res) => {
-      console.log(res);
-
+      console.log(res)
+      $(`#${deleteThisPost}`).remove();
+      
     })
     .catch((err) => console.log(err));
 }

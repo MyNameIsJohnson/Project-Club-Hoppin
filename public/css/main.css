@@ -1,12 +1,13 @@
 body{
   background-color: #5d5871;
 }
-header,h1{
+header {
+  text-align: center;
   font-family: fantasy;
   padding: 20px;
   position: relative;
   color: white;
-  border-bottom: solid 2px #cfcbf7;
+  margin-bottom: 20px;
 }
 .logo{
   height: 100px;
@@ -19,7 +20,11 @@ header,h1{
 .row h4 {
   color: #cab9ed;
 }
-
+ 
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
 .clubimg{
   width: 300px;
   height: 300px;
