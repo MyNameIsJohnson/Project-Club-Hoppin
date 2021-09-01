@@ -7,7 +7,7 @@ const ClubSchema = new mongoose.Schema({
     details: String,
     image: String,
     link: String,
-    reviews: [Post.schema]
+    posts: [Post.schema],
 });
-
-module.exports = mongoose.model('Club', ClubSchema);
+const Club = mongoose.model('Club', ClubSchema);
+module.exports = Club;
