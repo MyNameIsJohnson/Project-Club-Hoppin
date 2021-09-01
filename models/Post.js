@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
  // constructing a schema for reviews(posts)
 const PostSchema = new mongoose.Schema({
-    name: String,
-    review: String,
-    description: String,
-});
+    title: String,
+    body: String,
+}, {timestamps: true});
 
 module.exports = mongoose.model('Post', PostSchema);
